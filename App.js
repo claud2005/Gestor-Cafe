@@ -26,7 +26,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>📋 Gestor-Café Cruzeiro</Text>
+      <Text style={styles.title}>📋 Gestor-Café Cruzeiro.</Text>
       {dados.length === 0 ? (
         <Text>A carregar dados...</Text>
       ) : (
