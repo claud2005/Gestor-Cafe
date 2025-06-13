@@ -1,13 +1,15 @@
 {
   "name": "gestor-cafe",
-  "license": "0BSD",
   "version": "1.0.0",
-  "main": "index.js",
+  "license": "0BSD",
+  "main": "electron.js",
+  "private": true,
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "electron": "concurrently \"expo start --web\" \"wait-on http://localhost:19006 && electron .\""
   },
   "dependencies": {
     "@expo/metro-runtime": "~5.0.4",
@@ -26,7 +28,9 @@
     "react-native-web": "^0.20.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.0"
-  },
-  "private": true
+    "@babel/core": "^7.20.0",
+    "concurrently": "^8.2.2",
+    "electron": "^36.4.0",
+    "wait-on": "^7.2.0"
+  }
 }
